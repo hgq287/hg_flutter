@@ -1,0 +1,10 @@
+{
+  "editor.fontSize": 12,
+  "files.autoSave": "onWindowChange",
+  "editor.wordWrap": "on",
+  "[dart]": {
+    "editor.rulers": [],
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false
+  }
+}
