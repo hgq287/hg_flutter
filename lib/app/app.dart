@@ -1,3 +1,4 @@
+import 'package:dt_flutter/scenes/auth/signin/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -32,7 +33,7 @@ class _MyAppState extends ConsumerState<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(title: 'DTF Homepage'),
+      home: const SignInPage(),
     );
   }
 }

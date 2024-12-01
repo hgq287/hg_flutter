@@ -1,5 +1,5 @@
 import 'package:dt_flutter/app/app.dart';
-import 'package:dt_flutter/app_config.dart';
+import 'package:dt_flutter/app/app_config.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async {
