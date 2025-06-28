@@ -1,4 +1,4 @@
-# dt_flutter
+# hg_flutter
 
 Template for Desktop & Mobile apps, inspired by Flutter & Dart.
 

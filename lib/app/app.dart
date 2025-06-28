@@ -1,8 +1,8 @@
-import 'package:dt_flutter/scenes/auth/signin/signin_page.dart';
+import 'package:hg_flutter/scenes/auth/signin/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:dt_flutter/scenes/home/home_page.dart';
+import 'package:hg_flutter/scenes/home/home_page.dart';
 
 Future<void> bootstrap() async {
   runApp(
