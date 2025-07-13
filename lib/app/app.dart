@@ -1,8 +1,8 @@
-import 'package:hg_flutter/scenes/auth/signin/signin_page.dart';
+import 'package:hg_flutter/features/auth/signin/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:hg_flutter/scenes/home/home_page.dart';
+import 'package:hg_flutter/features/home/home_page.dart';
 
 Future<void> bootstrap() async {
   runApp(
@@ -28,7 +28,7 @@ class _MyAppState extends ConsumerState<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Dtt Flutter',
+      title: 'Hg Flutter',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
