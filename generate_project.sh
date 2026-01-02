@@ -19,7 +19,9 @@ rsync -avq . "$OUT_DIR/$NEW_NAME" \
     --exclude .git \
     --exclude build \
     --exclude .dart_tool \
-    --exclude "$OUT_DIR"
+    --exclude "$OUT_DIR" \
+    --exclude generate_project.sh \
+    --exclude Makefile
 
 cd "$OUT_DIR/$NEW_NAME" || exit
 
