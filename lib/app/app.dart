@@ -1,8 +1,11 @@
-import 'package:hg_flutter/features/auth/signin/signin_page.dart';
+import 'package:hg_flutter/features/auth/auth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import 'package:hg_flutter/features/home/home_page.dart';
+import 'package:hg_flutter/constants.dart';
+import 'package:hg_flutter/generated/app_localizations.dart';
+// import 'package:hg_flutter/features/home/home_page.dart';
 
 Future<void> bootstrap() async {
   runApp(
@@ -14,9 +17,9 @@ Future<void> bootstrap() async {
 }
 
 class MyApp extends ConsumerStatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
   @override
-  _MyAppState createState() => _MyAppState();
+  ConsumerState<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends ConsumerState<MyApp> {
@@ -29,11 +32,14 @@ class _MyAppState extends ConsumerState<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Hg Flutter',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: backgroundColor,
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme).apply(bodyColor: Colors.white),
+        canvasColor: secondaryColor,
       ),
-      home: const SignInPage(),
+      home: const AuthPage(),
     );
   }
 }
