@@ -44,8 +44,13 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Environments
+# Environments — never commit local secrets
 .env
+.env.local
+.env.*.local
 
 # Generated projects
 out/
+
+# Test coverage
+coverage/

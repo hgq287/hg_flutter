@@ -1,0 +1,26 @@
+{
+  "@@locale": "en",
+  "appTitle": "Hg Flutter",
+  "authTitle": "Sign in",
+  "authSubtitle": "Use your account to continue",
+  "authEmail": "Email",
+  "authPassword": "Password",
+  "authSubmit": "Sign in",
+  "authValidation": "Enter an email and password",
+  "authError": "Sign in failed",
+  "homeTitle": "Home",
+  "homeSignedIn": "Signed in as {email}",
+  "@homeSignedIn": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "homeAssistant": "Assistant",
+  "homeSignOut": "Sign out",
+  "assistantTitle": "Assistant",
+  "assistantHint": "Ask a question",
+  "assistantSend": "Send",
+  "assistantEmpty": "Ask about help articles or your sample balance. Transfers are refused."
+}

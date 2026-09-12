@@ -3,7 +3,7 @@ SCRIPT = generate_project.sh
 OUT_DIR = out
 OLD_NAME = hg_flutter
 
-.PHONY: generate clean check help
+.PHONY: generate clean check help ci analyze test format
 
 help:
 	@echo "========================================"
@@ -13,6 +13,10 @@ help:
 	@echo "  make generate name=my_app   - Clone, rename, and init"
 	@echo "  make check name=my_app      - Verify no old names exist"
 	@echo "  make clean                  - Clear the /out folder"
+	@echo "  make format                 - Check dart format"
+	@echo "  make analyze                - flutter analyze"
+	@echo "  make test                   - flutter test (app + hg_native)"
+	@echo "  make ci                     - format + analyze + test"
 
 generate:
 	@if [ -z "$(name)" ]; then \
@@ -38,3 +42,15 @@ check:
 clean:
 	@rm -rf $(OUT_DIR)
 	@echo "Cleaned output directory."
+
+format:
+	dart format --output=none --set-exit-if-changed .
+
+analyze:
+	flutter analyze --fatal-infos
+
+test:
+	flutter test --coverage
+	cd packages/hg_native && flutter test
+
+ci: format analyze test

@@ -1,0 +1,26 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Hg Flutter",
+  "authTitle": "Đăng nhập",
+  "authSubtitle": "Dùng tài khoản của bạn để tiếp tục",
+  "authEmail": "Email",
+  "authPassword": "Mật khẩu",
+  "authSubmit": "Đăng nhập",
+  "authValidation": "Nhập email và mật khẩu",
+  "authError": "Đăng nhập thất bại",
+  "homeTitle": "Trang chủ",
+  "homeSignedIn": "Đã đăng nhập với {email}",
+  "@homeSignedIn": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "homeAssistant": "Trợ lý",
+  "homeSignOut": "Đăng xuất",
+  "assistantTitle": "Trợ lý",
+  "assistantHint": "Đặt câu hỏi",
+  "assistantSend": "Gửi",
+  "assistantEmpty": "Hỏi về bài viết trợ giúp hoặc số dư mẫu. Chuyển tiền sẽ bị từ chối."
+}
