@@ -1,45 +1,45 @@
-import 'package:hg_flutter/features/auth/auth_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import 'package:hg_flutter/constants.dart';
+import 'package:go_router/go_router.dart';
+import 'package:hg_flutter/app/di/providers.dart';
+import 'package:hg_flutter/app/router.dart';
+import 'package:hg_flutter/app/theme.dart';
 import 'package:hg_flutter/generated/app_localizations.dart';
-// import 'package:hg_flutter/features/home/home_page.dart';
 
-Future<void> bootstrap() async {
-  runApp(
-    // For widgets to be able to read providers, we need to wrap the entire
-    // application in a "ProviderScope" widget.
-    // This is where the state of our providers will be stored.
-    const ProviderScope(child: MyApp()),
-  );
-}
+class HgApp extends ConsumerStatefulWidget {
+  const HgApp({super.key});
 
-class MyApp extends ConsumerStatefulWidget {
-  const MyApp({super.key});
   @override
-  ConsumerState<MyApp> createState() => _MyAppState();
+  ConsumerState<HgApp> createState() => _HgAppState();
 }
 
-class _MyAppState extends ConsumerState<MyApp> {
+class _HgAppState extends ConsumerState<HgApp> {
+  late final SessionListenable _refresh;
+  late final GoRouter _router;
+
   @override
   void initState() {
     super.initState();
+    final session = ref.read(sessionPortProvider);
+    _refresh = SessionListenable(session);
+    _router = createRouter(session: session, refresh: _refresh);
+  }
+
+  @override
+  void dispose() {
+    _refresh.dispose();
+    _router.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Hg Flutter',
+      theme: buildAppTheme(),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      theme: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: backgroundColor,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme).apply(bodyColor: Colors.white),
-        canvasColor: secondaryColor,
-      ),
-      home: const AuthPage(),
+      routerConfig: _router,
     );
   }
 }

@@ -97,6 +97,102 @@ abstract class AppLocalizations {
     Locale('en'),
     Locale('vi'),
   ];
+
+  /// No description provided for @appTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hg Flutter'**
+  String get appTitle;
+
+  /// No description provided for @authTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get authTitle;
+
+  /// No description provided for @authSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Use your account to continue'**
+  String get authSubtitle;
+
+  /// No description provided for @authEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get authEmail;
+
+  /// No description provided for @authPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get authPassword;
+
+  /// No description provided for @authSubmit.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get authSubmit;
+
+  /// No description provided for @authValidation.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter an email and password'**
+  String get authValidation;
+
+  /// No description provided for @authError.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in failed'**
+  String get authError;
+
+  /// No description provided for @homeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get homeTitle;
+
+  /// No description provided for @homeSignedIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Signed in as {email}'**
+  String homeSignedIn(String email);
+
+  /// No description provided for @homeAssistant.
+  ///
+  /// In en, this message translates to:
+  /// **'Assistant'**
+  String get homeAssistant;
+
+  /// No description provided for @homeSignOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out'**
+  String get homeSignOut;
+
+  /// No description provided for @assistantTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Assistant'**
+  String get assistantTitle;
+
+  /// No description provided for @assistantHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask a question'**
+  String get assistantHint;
+
+  /// No description provided for @assistantSend.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get assistantSend;
+
+  /// No description provided for @assistantEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask about help articles or your sample balance. Transfers are refused.'**
+  String get assistantEmpty;
 }
 
 class _AppLocalizationsDelegate
